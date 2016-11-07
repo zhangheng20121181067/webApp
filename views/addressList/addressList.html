@@ -1,0 +1,40 @@
+<ion-view>
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">通讯录</h1>
+            <div class="buttons">
+                <button class="button button-icon ion-compose" ng-click="openModal()"></button>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+        <ion-list>
+                <ion-item class="item-button-right" ng-repeat="contact in contacts">
+                    {{contact.name}}
+                    <span class="item-note">{{contact.email}}</span>
+                    <button class="button button-small button-positive" ng-click="delete(contact)">删除</button>
+                </ion-item>
+        </ion-list>
+        </ion-content>
+</ion-view>
+        <!--内联模板-->
+        <script id="views/modal.html" type="text/ng-template">
+            <ion-modal-view>
+                <ion-header-bar class="bar bar-header bar-positive">
+                    <h1 class="title">新建联系人</h1>
+                    <button class="button button-clear button-primary" ng-click="closeModal()">取消</button>
+                </ion-header-bar>
+                <ion-content class="padding">
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">姓名</span>
+                            <input type="text" ng-model="newUser.username">
+                        </label>
+
+                        <label class="item item-input">
+                            <span class="input-label">邮箱</span>
+                            <input type="text" ng-model="newUser.email">
+                        </label>
+                        <button class="button button-full button-positive" ng-click="createContact(newUser)">新建</button>
+                    </div>
+                </ion-content>
+            </ion-modal-view>
+        </script>

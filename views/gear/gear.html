@@ -1,0 +1,42 @@
+<ion-view title="我的" id="myself">
+
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">我的</h1>
+       <!-- <button class="button button-icon ion-gear-a" ui-sref="tabs.setting"></button>-->
+    </ion-header-bar>
+    <ion-content class="has-header">
+
+        <div class="list" >
+            <div class="item item-avatar-left item-icon-right">  <!-- ui-sref="tabs.myselfset"-->
+                <img src="images/01.jpg">
+                <h3>菲儿</h3>
+                <p>ID:zhangheng</p>
+                <i class="icon ion-chevron-right button-small"></i>
+             </div>
+            <div class="item item-icon-left item-icon-right">
+                <i class="icon ion-image calm"></i>相册
+                <i class="icon ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-left item-icon-right" ng-click="noopen()">
+                <i class="icon ion-cube balanced"></i>收藏
+                <i class="icon ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-left item-icon-right" ng-click="noopen()">
+                <i class="icon ion-briefcase assertive"></i>钱包
+                <i class="icon ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-left item-icon-right" ng-click="noopen()">
+                <i class="icon ion-folder positive"></i>卡包
+                <i class="icon ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-left item-icon-right" ng-click="noopen()">
+                <i class="icon ion-android-happy royal"></i>表情
+                <i class="icon ion-chevron-right button-small"></i>
+            </div>
+            <div class="item item-icon-left item-icon-right setting" ui-sref="tabs.setting">
+                <i class="icon ion-gear-a assertive"></i>设置
+                <i class="icon ion-chevron-right  button-small"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

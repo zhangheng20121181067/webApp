@@ -1,0 +1,23 @@
+<ion-view  id="login">
+    <ion-header-bar class="bar-assertive button-right">
+        <h1 class="title">界面登录</h1>
+        <!--<button class="button button-positive">进入</button>-->
+    </ion-header-bar>
+    <ion-content class="login">
+        <form name="loginForm" novalidate>
+            <div class="list">
+                   <label class="item-input">
+                       <span class="input-label">用户名</span>
+                       <input type="text" placeholder="手机号/邮箱" name="user" maxlength="11" pattern="\d{11}" ng-model="data.user" required/>
+                   </label>
+                   <label class="item-input">
+                       <span class="input-label">密码</span>
+                       <input type="password" placeholder="请输入六位密码" maxlength="6" pattern="\d{6}" name="mima" ng-model="data.mima" required/>
+                   </label>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="disappar()" ng-disabled="loginForm.$invalid" ui-sref="tabs.home">登录</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

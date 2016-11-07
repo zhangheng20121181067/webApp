@@ -1,0 +1,54 @@
+<ion-view title="我的主题" id="theme">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button>返回</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-header-bar class="bar-positive nvshen">女神SHOW</ion-header-bar>
+            <ion-slide-box class="has-header" auto-play="true" does-continue="true" slide-interval="2000" show-pager="false">
+                <ion-slide>
+                    <img class="full-image" src="images/01.jpg" alt="">
+                </ion-slide>
+                <ion-slide>
+                    <img class="full-image" src="images/02.jpg" alt="">
+                </ion-slide>
+                <ion-slide>
+                    <img class="full-image" src="images/03.jpg" alt="">
+                </ion-slide>
+                <ion-slide>
+                    <img class="full-image" src="images/04.jpg" alt="">
+                </ion-slide>
+                <ion-slide>
+                    <img class="full-image" src="images/05.jpg" alt="">
+                </ion-slide>
+            </ion-slide-box>
+        <h3 class="jianjie positive-bg">菲菲事迹</h3>
+        <div class="item content">
+           <p>刘亦菲，1987年8月25日出生于湖北武汉，华语影视女演员、流行乐歌手，毕业于北京电影学院2002级表演系本科班。
+               2002年，十五岁的她因出演民国剧《金粉世家》踏入演艺圈；同年，因主演武侠剧《天龙八部》而崭露头角。
+               2004年，凭借仙侠剧《仙剑奇侠传》赵灵儿一角获得了高人气与关注度。
+               2006年，因在金庸剧《神雕侠侣》中饰演小龙女再次受到广泛关注；同年，发行了首张个人专辑《刘亦菲》。
+               2008年起，开始将演艺事业的重心转向大银幕，并出演了好莱坞电影《功夫之王》。
+           </p>
+       </div>
+        <h3 class="zuopin positive-bg">菲菲参演电影</h3>
+            <div class="row"  ng-repeat="pic in pics" >
+                <div class="col" ng-repeat="item in pic.src">
+                    <img ng-src="{{item.imgSrc}}" alt="">
+                </div>
+                <!--<div class="col"><img src="images/1.jpg" alt=""></div>
+                <div class="col"><img src="images/1.jpg" alt=""></div>
+                <div class="col"><img src="images/1.jpg" alt=""></div>-->
+            </div>
+           <!-- <div class="item row">
+                <div class="col"><img src="images/2.jpg" alt=""></div>
+                <div class="col"><img src="images/2.jpg" alt=""></div>
+                <div class="col"><img src="images/2.jpg" alt=""></div>
+            </div>-->
+        <h3 class="zuopin positive-bg">菲菲参演电视剧</h3>
+        <div class="row"  ng-repeat="pic in pics" >
+            <div class="col" ng-repeat="item in pic.dianshi">
+                <img ng-src="{{item.imgSrc}}" alt="">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

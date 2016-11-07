@@ -1,0 +1,73 @@
+<ion-view id="life" >
+        <ion-header-bar class="bar-positive">
+            <div class="buttons">
+                <button class="button icon ion-chevron-left" ng-click=""></button>
+            </div>
+            <h1 class="title">生活圈</h1>
+            <div class="buttons">
+                <button class="button button-icon ion-plus-circled" ng-click="openModal()"></button>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <div class="full-image">
+                <img src="images/05.jpg" alt="">
+            </div>
+            <ion-list>
+                <ion-item class="xiangdui item item-text-wrap item-avatar-left item-button-right" ng-repeat="comment in comments">
+                    <img ng-src="{{comment.imgsrc}}" alt="">
+                    <h2>{{comment.user}}</h2>
+                    <p>{{comment.info}}</p><br>
+
+                    <div ng-controller="huiFu">
+                        <button class="juedui button icon ion-android-textsms energized" ng-click="a=!a"></button>
+                             <div ng-repeat="hehe in haha">
+                                  <p>{{hehe.rep}}</p>
+                             </div>
+                        <div class=" item-input-inset item-button-right" ng-init="a=false" ng-show="a">
+                            <input class="item-input-wrapper" type="text" ng-model="replay">
+                            <a class="fasong button button-small button-positive" ng-click="a=false;huifu()">发送</a>
+                        </div>
+                    </div>
+                    <div class="row life" ng-controller="zancai">
+                        <div class="col"> <i class="icon  ion-thumbsup balanced" ng-click="zana()"></i>{{zan}}</div>
+                        <div class="col"> <i class="icon ion-thumbsdown calm" ng-click="caia()"></i>{{cai}}</div>
+                    </div>
+                   <!-- <i class="button icon ion-android-textsms"></i>-->
+                </ion-item>
+            </ion-list>
+        </ion-content>
+</ion-view>
+
+
+<script id="views/life.html" type="text/ng-template" >
+    <ion-modal-view >
+        <ion-header-bar class="bar-positive">
+            <div class="buttons">
+                <button class="button icon ion-arrow-left-c" ng-click="closeModal()"></button>
+            </div>
+            <h1 class="title"></h1>
+            <div class="buttons">
+                <button class="button button-balanced" ng-click="send()">发送</button>
+            </div>
+        </ion-header-bar>
+
+        <ion-content class="ddd">
+            <textarea name="textarea" placeholder="这一刻的想法..."   ng-model="pinglun"></textarea>
+             <div id="who" class="item item-text-wrap item-icon-left ">
+                 <i class="icon ion-android-pin"></i>
+                 <span>所在位置</span>
+             </div>
+             <div class="list">
+                 <div class="item item-text-wrap item-icon-left">
+                     <i class="icon ion-android-globe"></i>
+                     谁可以看
+                     <span class="item-note">公开</span>
+                 </div>
+                 <div class="item item-text-wrap item-icon-left">
+                     <i class="icon ion-at"></i>
+                     <span>提醒谁看</span>
+                 </div>
+             </div>
+        </ion-content>
+    </ion-modal-view>
+</script>
