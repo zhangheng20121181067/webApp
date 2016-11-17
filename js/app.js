@@ -3,7 +3,8 @@
  */
 var myapp=angular.module("myapp",["ionic"]);
 //配置路由：依赖注入两个对象：$stateProvider，$urlRouterProvider
-myapp.config(function($stateProvider,$urlRouterProvider){
+myapp.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
+    $ionicConfigProvider.tabs.position('bottom');
     $stateProvider.state("tour",{
             url:"/tour",
             templateUrl:"views/tour/tour.html",
